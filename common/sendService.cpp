@@ -94,7 +94,6 @@ void SendService::DoSendData(int c_socket, std::vector<std::string>&filepath)
 			std::cout << "error can not find "<< it << std::endl;
 			return;
 		}
-		std::cout << "debug3" << std::endl;
 		memset(buffer, 0, SBUFFER_SIZE);
 		int length = 0;
 		int index = 0;
