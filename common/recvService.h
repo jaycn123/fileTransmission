@@ -47,7 +47,6 @@ public:
     char m_cbRecvBuf[CACHE_SIZE];
    
     std::vector<WriteFileData>fileNameVec;
-    uint64_t  begintime =0 , endtime = 0;
     uint64_t  alldatalen = 0;
 
     std::string m_serverip ="";

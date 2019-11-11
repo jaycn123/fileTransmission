@@ -146,9 +146,6 @@ int RecvService::Start()
 
                 if (isNew)
                 {
-                    begintime = NowTime;
-
-
                     //std::thread Tprint(std::bind(printProgress, pHeader->filesize, filename));
                     //Tprint.detach();
 
@@ -156,7 +153,7 @@ int RecvService::Start()
                     filedata.fp = fopen(filename.c_str(), "wb");
                     if (filedata.fp == nullptr)
                     {
-                        std::cout << "write file Error" << filename << std::endl;
+                        std::cout << "write file Error " << filename << std::endl;
                         return -1;
                     }
 
