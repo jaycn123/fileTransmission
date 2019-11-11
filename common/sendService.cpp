@@ -195,10 +195,13 @@ void SendService::Start()
 	std::vector<std::string>m_vtFileList;
 
 #if defined(_WIN32)
+	/*
 	std::string workSpacePath = GetCurrentExeDir();
 	std::string sqlPath = workSpacePath + "\\src";
 	std::cout << "sqlPath : " << sqlPath << std::endl;
 	get_all_files(sqlPath,m_vtFileList);
+	*/
+	get_all_files("src", m_vtFileList);
 #else
 	get_all_files("src", m_vtFileList);
 #endif

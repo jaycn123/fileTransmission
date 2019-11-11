@@ -12,5 +12,7 @@ int main(int argc, char* argv[])
     RecvService recvservice(serverip);
     recvservice.Start();
 
+	system("pause");
+
     return 0;  
 }

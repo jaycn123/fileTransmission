@@ -125,8 +125,11 @@ int RecvService::Start()
                 {
                     break;
                 }
-
+#if defined(_WIN32)
+				std::string filename = "des\\";
+#else
                 std::string filename = "des/";
+#endif
                 filename.append(pHeader->filename);
                 bool isNew = true;
                 WriteFileData *pfileData = NULL;
@@ -240,7 +243,7 @@ int RecvService::Start()
         }
     }
 
-    close(m_socket);
+    CloseSocket(m_socket);
 
 	return 0;
 }
