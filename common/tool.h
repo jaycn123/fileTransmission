@@ -470,10 +470,6 @@ static bool findstr(std::string& srctr, std::string& fstr)
 
 static void get_peer_ip_port(int fd, std::string& ip, int &port)
 {
-
-#if defined(_WIN32)
-
-#else
     int client_fd = fd;
     
     // discovery client information
@@ -497,7 +493,6 @@ static void get_peer_ip_port(int fd, std::string& ip, int &port)
     ip = buf;
 	
     return;
-#endif
 }
 
 static std::string GetCurrentExeDir()

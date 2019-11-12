@@ -28,8 +28,6 @@ public:
 
 	int m_socket;
 
-	std::vector<int>ClientScoketVec;
-
 };
 
 

@@ -182,7 +182,6 @@ void SendService::Doaccept(std::vector<std::string>&filepath)
 			std::cout << "SOCKET_ERROR ..." << std::endl;
 			continue;
 		}
-		ClientScoketVec.push_back(m_new_socket);
 		std::cout << "New Client Connection" << std::endl;
 		std::thread T(std::bind(&SendService::DoSendData, this,m_new_socket,filepath));
 		T.detach();
